@@ -9,10 +9,12 @@
 //import Foundation
 import WatchKit
 import CoreMotion
+import HealthKit
 
 class AthleticMetrics: NSObject
 {
     let motionManager = CMMotionManager()
+    //let healthManager = HKHealthStore()
     let wristLocationIsLeft = WKInterfaceDevice.current().wristLocation == .left
     var updateInterval = 1.0/60.0
     var timerBoolean = false
@@ -46,7 +48,8 @@ class AthleticMetrics: NSObject
                     let accel_z = accelData.acceleration.z
                     accelArray = [(accel_x), (accel_y), (accel_z)]
                 }
-                var motionData = [gyroArray, accelArray]
+                var motionData = [[Double]]()
+                motionData = [gyroArray, accelArray]
                 // push the motionData array to the class that communicates with the iphone
             }
         }
@@ -56,5 +59,12 @@ class AthleticMetrics: NSObject
         timerBoolean = false
         motionManager.stopGyroUpdates()
         motionManager.stopAccelerometerUpdates()
+    }
+    func authorizeHealthKit()
+    {
+        if HKHealthStore.isHealthDataAvailable()
+        {
+            let infoToRead = Set([HKSampleType.quantityType(forIdentifier: .heartRate)!])
+        }
     }
 }

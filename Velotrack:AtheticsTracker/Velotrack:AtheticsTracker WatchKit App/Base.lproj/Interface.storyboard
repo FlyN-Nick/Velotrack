@@ -1,14 +1,90 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
+        <!--Tracking-->
+        <scene sceneID="TBl-Kh-LVK">
+            <objects>
+                <controller identifier="Tracking" title="Tracking" id="kWU-RI-97H">
+                    <items>
+                        <label alignment="center" text="VeloTrack" textAlignment="center" id="7le-8v-Fob" userLabel="Velotrack">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <table alignment="left" id="Zif-6G-ERd">
+                            <items>
+                                <tableRow id="lA5-UL-Xrm">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="hX0-PB-Vst">
+                                        <color key="backgroundColor" red="1" green="0.081321229716778798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <table alignment="left" id="Gy6-NT-IHA">
+                            <items>
+                                <tableRow id="knZ-gQ-6L5">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="DaK-6B-6jp">
+                                        <color key="backgroundColor" red="0.96620899439999997" green="0.011251413286256435" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <table alignment="left" id="IUo-Ie-CUl">
+                            <items>
+                                <tableRow id="Bs5-c5-48E">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="bFN-9V-fp6">
+                                        <color key="backgroundColor" red="0.96620899439999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" height="40" alignment="left" title="End Tracking" id="hFS-w7-Z5J">
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="319" y="-14"/>
+        </scene>
+        <!--DarkenedSportsCollage-->
+        <scene sceneID="tUy-Be-LAp">
+            <objects>
+                <controller backgroundImage="DarkenedSportsCollage" id="47m-wd-i0N">
+                    <items>
+                        <label width="136" alignment="left" text="Tracking Completed" textAlignment="center" numberOfLines="0" id="I8K-Rk-yXE"/>
+                        <button width="1" alignment="left" title="Home" id="6Oe-0X-Gry">
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="643" y="98"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Velotrack_AtheticsTracker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="VeloTrack" id="SUR-2K-i0o">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="rQi-ye-Zrk"/>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Start Tracking" id="SWZ-If-jxx">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Export" id="cdW-1e-Yfc">
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +107,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Velotrack_AtheticsTracker_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

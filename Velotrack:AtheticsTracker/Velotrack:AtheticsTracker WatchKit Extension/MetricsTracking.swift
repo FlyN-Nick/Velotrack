@@ -22,7 +22,7 @@ class MetricsTracking: NSObject
 {
     // MARK: Properties
     
-    let motionManager = CMMotionManager()
+    /*let motionManager = CMMotionManager()
     let queue = OperationQueue()
     let wristLocationIsLeft = WKInterfaceDevice.current().wristLocation == .left
     
@@ -107,7 +107,7 @@ class MetricsTracking: NSObject
         rateAlongGravityBuffer.reset()
         recentDetection = false
     
-    }
+    }*/
 }
 
 

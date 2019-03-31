@@ -27,6 +27,8 @@
 		01FD886A2250272500680852 /* MetricsTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD88692250272500680852 /* MetricsTracking.swift */; };
 		01FD886D22502D0200680852 /* RunningBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD886C22502D0200680852 /* RunningBuffer.swift */; };
 		01FD886F2250332C00680852 /* AthleticMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD886E2250332C00680852 /* AthleticMetrics.swift */; };
+		01FD8879225085E200680852 /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD8878225085E200680852 /* Synchronizer.swift */; };
+		01FD887A225085E200680852 /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD8878225085E200680852 /* Synchronizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,7 @@
 		01FD88692250272500680852 /* MetricsTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTracking.swift; sourceTree = "<group>"; };
 		01FD886C22502D0200680852 /* RunningBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunningBuffer.swift; path = "../../../../Downloads/SwingWatchUsingDeviceMotionontheWatch/SwingWatch WatchKit Extension/RunningBuffer.swift"; sourceTree = "<group>"; };
 		01FD886E2250332C00680852 /* AthleticMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticMetrics.swift; sourceTree = "<group>"; };
+		01FD8878225085E200680852 /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,7 @@
 				01599C852250166C00B534F0 /* PushNotificationPayload.apns */,
 				01FD88692250272500680852 /* MetricsTracking.swift */,
 				01FD886E2250332C00680852 /* AthleticMetrics.swift */,
+				01FD8878225085E200680852 /* Synchronizer.swift */,
 			);
 			path = "Velotrack:AtheticsTracker WatchKit Extension";
 			sourceTree = "<group>";
@@ -449,6 +453,7 @@
 			files = (
 				01599C462250166A00B534F0 /* ViewController.swift in Sources */,
 				01599C442250166A00B534F0 /* AppDelegate.swift in Sources */,
+				01FD8879225085E200680852 /* Synchronizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +481,7 @@
 				01FD886F2250332C00680852 /* AthleticMetrics.swift in Sources */,
 				01599C812250166C00B534F0 /* NotificationController.swift in Sources */,
 				01599C7F2250166C00B534F0 /* ExtensionDelegate.swift in Sources */,
+				01FD887A225085E200680852 /* Synchronizer.swift in Sources */,
 				01FD886A2250272500680852 /* MetricsTracking.swift in Sources */,
 				01599C7D2250166C00B534F0 /* InterfaceController.swift in Sources */,
 			);
