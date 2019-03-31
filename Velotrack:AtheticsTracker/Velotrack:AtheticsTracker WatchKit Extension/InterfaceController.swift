@@ -140,7 +140,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
     
-    @IBAction func start(button: WKInterfaceButton)
+    /*@IBAction func startAndEndTracking()
     {
         print("button triggered")
         if !hasStarted
@@ -153,7 +153,27 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             StopTracking()
             print("session ending")
         }
+    }*/
+    @IBAction func start(button: WKInterfaceButton) {
+        print("button triggered")
+        if !hasStarted
+        {
+            hasStarted = true
+            self.StartTracking()
+            print("session beginning")
+            let acelX: String = "x, hi"
+            AccelerationLabel.setText(acelX)
+        }
+        else
+        {
+            hasStarted = false
+            self.StopTracking()
+            print("session ending")
+            let acelX: String = "Accel"
+            AccelerationLabel.setText(acelX)
+        }
     }
+    
     func receiveNewData(data: [[Double]])
     {
         print("data should have been received")

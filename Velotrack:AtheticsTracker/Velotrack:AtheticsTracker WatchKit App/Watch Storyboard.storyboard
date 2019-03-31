@@ -21,7 +21,7 @@
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" type="system" pointSize="13"/>
                             <connections>
-                                <action selector="startWithButton:" destination="UDN-lR-hNH" id="syQ-TO-a5t"/>
+                                <action selector="startWithButton:" destination="UDN-lR-hNH" id="UnQ-IU-Kc1"/>
                             </connections>
                         </button>
                     </items>
@@ -32,7 +32,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="81" y="-130"/>
+            <point key="canvasLocation" x="81" y="-133"/>
         </scene>
     </scenes>
 </document>
