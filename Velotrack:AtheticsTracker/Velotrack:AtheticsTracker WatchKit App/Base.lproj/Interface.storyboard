@@ -9,23 +9,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
-        <!--Tracking-->
+        <!--TrackingInterface-->
         <scene sceneID="TBl-Kh-LVK">
             <objects>
-                <controller identifier="Tracking" title="Tracking" id="kWU-RI-97H">
+                <controller identifier="TrackingInterface" title="TrackingInterface" id="kWU-RI-97H">
                     <items>
                         <label alignment="center" text="VeloTrack" textAlignment="center" id="7le-8v-Fob" userLabel="Velotrack">
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
-                        <table alignment="left" id="Zif-6G-ERd">
-                            <items>
-                                <tableRow id="lA5-UL-Xrm">
-                                    <group key="rootItem" width="1" height="25" alignment="left" id="hX0-PB-Vst">
-                                        <color key="backgroundColor" red="1" green="0.081321229716778798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </group>
-                                </tableRow>
-                            </items>
-                        </table>
                         <table alignment="left" id="Gy6-NT-IHA">
                             <items>
                                 <tableRow id="knZ-gQ-6L5">
@@ -33,13 +24,14 @@
                                         <color key="backgroundColor" red="0.96620899439999997" green="0.011251413286256435" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </group>
                                 </tableRow>
-                            </items>
-                        </table>
-                        <table alignment="left" id="IUo-Ie-CUl">
-                            <items>
                                 <tableRow id="Bs5-c5-48E">
                                     <group key="rootItem" width="1" height="25" alignment="left" id="bFN-9V-fp6">
                                         <color key="backgroundColor" red="0.96620899439999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </group>
+                                </tableRow>
+                                <tableRow id="lA5-UL-Xrm">
+                                    <group key="rootItem" width="1" height="25" alignment="left" id="hX0-PB-Vst">
+                                        <color key="backgroundColor" red="1" green="0.081321229716778798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </group>
                                 </tableRow>
                             </items>
@@ -51,27 +43,28 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="319" y="-14"/>
+            <point key="canvasLocation" x="439" y="345"/>
         </scene>
-        <!--DarkenedSportsCollage-->
+        <!--TrackingCompletedInterface-->
         <scene sceneID="tUy-Be-LAp">
             <objects>
-                <controller backgroundImage="DarkenedSportsCollage" id="47m-wd-i0N">
+                <controller identifier="TrackingCompleted" title="TrackingCompletedInterface" id="47m-wd-i0N">
                     <items>
                         <label width="136" alignment="left" text="Tracking Completed" textAlignment="center" numberOfLines="0" id="I8K-Rk-yXE"/>
                         <button width="1" alignment="left" title="Home" id="6Oe-0X-Gry">
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" type="system" pointSize="18"/>
                         </button>
+                        <imageView height="67" alignment="left" image="SpongebobThumbsUp" animationDuration="1.3999999999999999" id="KsS-zv-CeF"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="643" y="98"/>
+            <point key="canvasLocation" x="669" y="345"/>
         </scene>
-        <!--Interface Controller-->
+        <!--HomeInterface-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Velotrack_AtheticsTracker_WatchKit_App" customModuleProvider="target">
+                <controller identifier="HomeInterface" title="HomeInterface" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Velotrack_AtheticsTracker_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="VeloTrack" id="SUR-2K-i0o">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
