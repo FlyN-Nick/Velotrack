@@ -11,7 +11,9 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
+    @IBOutlet var StartTracking: WKInterfaceButton!
+    
+    @IBOutlet var Export: WKInterfaceButton!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         

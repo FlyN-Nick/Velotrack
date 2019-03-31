@@ -77,6 +77,10 @@
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="Export" destination="cdW-1e-Yfc" id="DKE-HS-oGF"/>
+                        <outlet property="StartTracking" destination="SWZ-If-jxx" id="3xU-rT-54Q"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

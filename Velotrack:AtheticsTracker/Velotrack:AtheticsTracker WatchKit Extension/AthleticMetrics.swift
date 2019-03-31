@@ -18,6 +18,7 @@ class AthleticMetrics: NSObject
     let wristLocationIsLeft = WKInterfaceDevice.current().wristLocation == .left
     var updateInterval = 1.0/60.0
     var timerBoolean = false
+    var theSyncyroziner = Synchronizer()
     func StartTracking()
     {
         if motionManager.isAccelerometerAvailable && motionManager.isGyroAvailable
@@ -50,7 +51,7 @@ class AthleticMetrics: NSObject
                 }
                 var motionData = [[Double]]()
                 motionData = [gyroArray, accelArray]
-                // push the motionData array to the class that communicates with the iphone
+                self.theSyncyroziner.receiveData(data: motionData)
             }
         }
     }
