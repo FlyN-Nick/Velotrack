@@ -13,8 +13,10 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     
-    @IBOutlet var Start: WKInterfaceButton!
+    //@IBOutlet var Start: WKInterfaceButton!
+    //@IBOutlet var End: WKInterfaceButton!
     var theAthleticMetrics = AthleticMetrics();
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -35,4 +37,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
+    /*@IBAction func start(button: WKInterfaceButton)
+    {
+        theAthleticMetrics.StartTracking()
+    }*/
 }

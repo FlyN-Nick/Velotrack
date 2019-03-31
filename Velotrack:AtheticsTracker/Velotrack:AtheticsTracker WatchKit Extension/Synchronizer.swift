@@ -12,6 +12,9 @@ import HealthKit
 
 class Synchronizer: NSObject, WCSessionDelegate
 {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
     
     var canReachOtherDevice = false
     var dataThatDidNotSend: [[[[Double]]]] = Array() // yAy FoUr DiMeNsIoNaL aRrAyS
@@ -84,10 +87,8 @@ class Synchronizer: NSObject, WCSessionDelegate
             canReachOtherDevice = false
         }
     }
-    private func session(_ session: WCSession, didReceiveMessage message: [[[[Double]]]]) {
+    private func session(_ session: WCSession, didReceiveMessage message: [[[Double]]]) {
         // SAVE THE MESSAGE
         UserDefaults.standard.set(message, forKey: Date().description)
     }
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    } // ignore this, it is neccessary for the protocol
 }

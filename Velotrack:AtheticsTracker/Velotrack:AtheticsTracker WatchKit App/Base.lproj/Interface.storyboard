@@ -17,25 +17,12 @@
                         <label alignment="center" text="VeloTrack" textAlignment="center" id="7le-8v-Fob" userLabel="Velotrack">
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
-                        <table alignment="center" id="Gy6-NT-IHA">
-                            <items>
-                                <tableRow identifier="Acceleration" selectable="NO" id="knZ-gQ-6L5">
-                                    <group key="rootItem" width="1" height="25" alignment="left" id="DaK-6B-6jp">
-                                        <color key="backgroundColor" red="0.96620899439999997" green="0.011251413286256435" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </group>
-                                </tableRow>
-                                <tableRow identifier="Rotation" id="Bs5-c5-48E">
-                                    <group key="rootItem" width="1" height="25" alignment="left" id="bFN-9V-fp6">
-                                        <color key="backgroundColor" red="0.96620899439999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </group>
-                                </tableRow>
-                                <tableRow identifier="Heart Rate" id="lA5-UL-Xrm">
-                                    <group key="rootItem" width="1" height="25" alignment="left" id="hX0-PB-Vst">
-                                        <color key="backgroundColor" red="1" green="0.081321229716778798" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </group>
-                                </tableRow>
-                            </items>
-                        </table>
+                        <label alignment="left" text="Acceleration: x, y, z" id="A73-nH-5Fn">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <label alignment="left" text="Rotation x, y, z" id="5Qe-Ge-Bla">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
                         <button width="1" height="40" alignment="left" title="End Tracking" id="hFS-w7-Z5J">
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" type="system" pointSize="18"/>
