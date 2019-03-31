@@ -15,7 +15,6 @@
 		01599C592250166B00B534F0 /* Velotrack_AtheticsTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01599C582250166B00B534F0 /* Velotrack_AtheticsTrackerTests.swift */; };
 		01599C642250166B00B534F0 /* Velotrack_AtheticsTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01599C632250166B00B534F0 /* Velotrack_AtheticsTrackerUITests.swift */; };
 		01599C692250166B00B534F0 /* Velotrack:AtheticsTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 01599C682250166B00B534F0 /* Velotrack:AtheticsTracker WatchKit App.app */; };
-		01599C6F2250166B00B534F0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01599C6D2250166B00B534F0 /* Interface.storyboard */; };
 		01599C712250166C00B534F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01599C702250166C00B534F0 /* Assets.xcassets */; };
 		01599C782250166C00B534F0 /* Velotrack:AtheticsTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01599C772250166C00B534F0 /* Velotrack:AtheticsTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		01599C7D2250166C00B534F0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01599C7C2250166C00B534F0 /* InterfaceController.swift */; };
@@ -24,6 +23,8 @@
 		01599C832250166C00B534F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01599C822250166C00B534F0 /* Assets.xcassets */; };
 		01599C9D2250168600B534F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01599C9C2250168600B534F0 /* MapKit.framework */; };
 		01599C9F2250169800B534F0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01599C9E2250169800B534F0 /* HealthKit.framework */; };
+		01A739C8225131480055D9AF /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 01A739C2225131470055D9AF /* Base.lproj */; };
+		01F2774B22512D38005945E8 /* Watch Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2774A22512D38005945E8 /* Watch Storyboard.storyboard */; };
 		01FD886A2250272500680852 /* MetricsTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD88692250272500680852 /* MetricsTracking.swift */; };
 		01FD886D22502D0200680852 /* RunningBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD886C22502D0200680852 /* RunningBuffer.swift */; };
 		01FD886F2250332C00680852 /* AthleticMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FD886E2250332C00680852 /* AthleticMetrics.swift */; };
@@ -102,7 +103,6 @@
 		01599C632250166B00B534F0 /* Velotrack_AtheticsTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Velotrack_AtheticsTrackerUITests.swift; sourceTree = "<group>"; };
 		01599C652250166B00B534F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01599C682250166B00B534F0 /* Velotrack:AtheticsTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Velotrack:AtheticsTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01599C6E2250166B00B534F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		01599C702250166C00B534F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01599C722250166C00B534F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01599C772250166C00B534F0 /* Velotrack:AtheticsTracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Velotrack:AtheticsTracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +115,9 @@
 		01599C9C2250168600B534F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		01599C9E2250169800B534F0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		01599CA02250169800B534F0 /* Velotrack:AtheticsTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Velotrack:AtheticsTracker.entitlements"; sourceTree = "<group>"; };
+		01A739C2225131470055D9AF /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = "../../../../Documents/Velotrack/Velotrack:AtheticsTracker/Velotrack:AtheticsTracker WatchKit App/Base.lproj"; sourceTree = "<group>"; };
+		01A739C922513A9C0055D9AF /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		01F2774A22512D38005945E8 /* Watch Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Watch Storyboard.storyboard"; sourceTree = "<group>"; };
 		01FD88692250272500680852 /* MetricsTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTracking.swift; sourceTree = "<group>"; };
 		01FD886C22502D0200680852 /* RunningBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunningBuffer.swift; path = "../../../../Downloads/SwingWatchUsingDeviceMotionontheWatch/SwingWatch WatchKit Extension/RunningBuffer.swift"; sourceTree = "<group>"; };
 		01FD886E2250332C00680852 /* AthleticMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticMetrics.swift; sourceTree = "<group>"; };
@@ -197,7 +200,6 @@
 		01599C572250166B00B534F0 /* Velotrack:AtheticsTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				01599C582250166B00B534F0 /* Velotrack_AtheticsTrackerTests.swift */,
 				01599C5A2250166B00B534F0 /* Info.plist */,
 			);
 			path = "Velotrack:AtheticsTrackerTests";
@@ -215,9 +217,11 @@
 		01599C6C2250166B00B534F0 /* Velotrack:AtheticsTracker WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				01599C6D2250166B00B534F0 /* Interface.storyboard */,
 				01599C702250166C00B534F0 /* Assets.xcassets */,
+				01A739C2225131470055D9AF /* Base.lproj */,
 				01599C722250166C00B534F0 /* Info.plist */,
+				01F2774A22512D38005945E8 /* Watch Storyboard.storyboard */,
+				01A739C922513A9C0055D9AF /* Interface.swift */,
 			);
 			path = "Velotrack:AtheticsTracker WatchKit App";
 			sourceTree = "<group>";
@@ -230,6 +234,7 @@
 				01599C7E2250166C00B534F0 /* ExtensionDelegate.swift */,
 				01599C802250166C00B534F0 /* NotificationController.swift */,
 				01599C822250166C00B534F0 /* Assets.xcassets */,
+				01599C582250166B00B534F0 /* Velotrack_AtheticsTrackerTests.swift */,
 				01599C842250166C00B534F0 /* Info.plist */,
 				01599C852250166C00B534F0 /* PushNotificationPayload.apns */,
 				01FD88692250272500680852 /* MetricsTracking.swift */,
@@ -374,6 +379,7 @@
 					};
 					01599C672250166B00B534F0 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					01599C762250166C00B534F0 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -431,8 +437,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A739C8225131480055D9AF /* Base.lproj in Resources */,
+				01F2774B22512D38005945E8 /* Watch Storyboard.storyboard in Resources */,
 				01599C712250166C00B534F0 /* Assets.xcassets in Resources */,
-				01599C6F2250166B00B534F0 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,14 +534,6 @@
 				01599C4D2250166B00B534F0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		01599C6D2250166B00B534F0 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01599C6E2250166B00B534F0 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -703,14 +702,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3GKF7STU5Y;
 				IBSC_MODULE = Velotrack_AtheticsTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "Velotrack:AtheticsTracker WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Velotrack-Incorporated.Velotrack-AtheticsTracker.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
@@ -722,10 +728,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3GKF7STU5Y;
 				IBSC_MODULE = Velotrack_AtheticsTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "Velotrack:AtheticsTracker WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Velotrack-Incorporated.Velotrack-AtheticsTracker.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

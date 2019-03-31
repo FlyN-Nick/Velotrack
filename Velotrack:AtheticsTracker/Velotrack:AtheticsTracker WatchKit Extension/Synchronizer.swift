@@ -10,7 +10,7 @@ import WatchKit
 import WatchConnectivity
 import HealthKit
 
-class Synchronizer: NSObject, WCSessionDelegate
+class Synchronizer: NSObject/*, WCSessionDelegate*/
 {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
@@ -21,12 +21,13 @@ class Synchronizer: NSObject, WCSessionDelegate
     var heartRateThatDidNotSend: [HKQuantity] = Array()
     var communication = WCSession.self
     var hasSetUp = false
+    
     func setUp()
     {
         if (!hasSetUp)
         {
             let session = WCSession.default
-            session.delegate = self
+            session.delegate = self as! WCSessionDelegate
             session.activate()
             hasSetUp = true
         }
