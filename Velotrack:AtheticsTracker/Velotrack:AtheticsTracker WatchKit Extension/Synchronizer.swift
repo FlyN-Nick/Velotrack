@@ -8,11 +8,14 @@
 
 import WatchKit
 import WatchConnectivity
+import HealthKit
 
-class Synchronizer: NSObject/*, WCSessionDelegate*/
+class Synchronizer: NSObject, WCSessionDelegate
 {
+    
     var canReachOtherDevice = false
-    var dataThatDidNotSend: [[[Double]]] = Array()
+    var dataThatDidNotSend: [[[[Double]]]] = Array() // yAy FoUr DiMeNsIoNaL aRrAyS
+    var heartRateThatDidNotSend: [HKQuantity] = Array()
     var communication = WCSession.self
     var hasSetUp = false
     func setUp()
@@ -20,18 +23,21 @@ class Synchronizer: NSObject/*, WCSessionDelegate*/
         if (!hasSetUp)
         {
             let session = WCSession.default
-            session.delegate = self as? WCSessionDelegate
+            session.delegate = self
             session.activate()
             hasSetUp = true
         }
     }
-    func receiveData(data: [[Double]])
+    func receiveData(data: [[[Double]]])
     {
         // receive and export that data
-        setUp()
+        
         if (canConnect())
         {
-            communication.sendMessageData(data, replyHandler: nil, errorHandler: nil)
+            /*communication.sendMessageData(data: data, replyHandler: nil, errorHandler: nil){
+            success, error in fatalError("rEeEeEeEeEeEeEe")
+             }*/
+            // for some reason this gives an error ^
         }
         else
         {
@@ -39,9 +45,26 @@ class Synchronizer: NSObject/*, WCSessionDelegate*/
             // probably alert the user
         }
     }
+    func receiveData(data: HKQuantity) // this is deprecated. Was meant for heart rate
+    {
+        // receive and export that data
+        
+        if canConnect()
+        {
+            /*communication.sendMessageData(data: data, replyHandler: nil) {
+                success, error in fatalError("rEeEeEeEeEeEeEe")
+                }*/
+            // does not work either ;(
+        }
+        else
+        {
+            heartRateThatDidNotSend.append(data) // temporarily saves data that couldn't send
+            // probably alert the user
+        }
+    }
     func canConnect() -> Bool
     {
-        if (canReachOtherDevice == true && WCSession.isSupported())
+        if canReachOtherDevice == true && WCSession.isSupported()
         {
             return true
         }
@@ -50,7 +73,7 @@ class Synchronizer: NSObject/*, WCSessionDelegate*/
             return false
         }
     }
-    func sessionReachibilityDidChange(session: WCSession)
+    func sessionReachabilityDidChange(_ session: WCSession)
     {
         if session.isReachable
         {
@@ -61,4 +84,10 @@ class Synchronizer: NSObject/*, WCSessionDelegate*/
             canReachOtherDevice = false
         }
     }
+    private func session(_ session: WCSession, didReceiveMessage message: [[[[Double]]]]) {
+        // SAVE THE MESSAGE
+        UserDefaults.standard.set(message, forKey: Date().description)
+    }
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    } // ignore this, it is neccessary for the protocol
 }

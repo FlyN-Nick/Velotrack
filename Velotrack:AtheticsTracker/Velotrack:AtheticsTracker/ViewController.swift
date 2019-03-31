@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var DataTable: UITableView!
-    //@IBOutlet weak var LiveDataTable: UITableView!
+    
     
     override func viewDidLoad()
     {

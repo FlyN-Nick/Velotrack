@@ -12,16 +12,18 @@ import CoreMotion
 import HealthKit
 
 class AthleticMetrics: NSObject
-{
+{    
     let motionManager = CMMotionManager()
     //let healthManager = HKHealthStore()
     let wristLocationIsLeft = WKInterfaceDevice.current().wristLocation == .left
     var updateInterval = 1.0/60.0
     var timerBoolean = false
     var theSyncyroziner = Synchronizer()
+    var motionDataSession: [[[Double]]] = Array()
+    
     func StartTracking()
     {
-        if motionManager.isAccelerometerAvailable && motionManager.isGyroAvailable
+        if motionManager.isAccelerometerAvailable && motionManager.isGyroAvailable/* && motionManager.isDeviceMotionAvailable*/
         {
             motionManager.accelerometerUpdateInterval = updateInterval
             motionManager.gyroUpdateInterval = updateInterval
@@ -35,6 +37,7 @@ class AthleticMetrics: NSObject
                 }
                 var gyroArray: Array<Double> = Array()
                 var accelArray: Array<Double> = Array()
+                var theHeartRate: HKQuantity
                 if let gyroData = self.motionManager.gyroData
                 {
                     let gyro_x = gyroData.rotationRate.x
@@ -49,9 +52,18 @@ class AthleticMetrics: NSObject
                     let accel_z = accelData.acceleration.z
                     accelArray = [(accel_x), (accel_y), (accel_z)]
                 }
+                /*if HKHealthStore.isHealthDataAvailable()
+                {
+                    theHeartRate = self.trackHeartRate()
+                    self.theSyncyroziner.receiveData(data: theHeartRate)
+                }*/
                 var motionData = [[Double]]()
                 motionData = [gyroArray, accelArray]
-                self.theSyncyroziner.receiveData(data: motionData)
+                self.motionDataSession.append(motionData)
+                //self.theSyncyroziner.receiveData(data: motionData)
+                /*var accurateData = CMDeviceMotion()
+                 accurateData.rotationRate
+                 accurateData.userAcceleration*/
             }
         }
     }
@@ -60,12 +72,31 @@ class AthleticMetrics: NSObject
         timerBoolean = false
         motionManager.stopGyroUpdates()
         motionManager.stopAccelerometerUpdates()
+        self.theSyncyroziner.receiveData(data: motionDataSession)
     }
-    func authorizeHealthKit()
+    /*func trackHeartRate() -> HKQuantity
     {
+        var heartRate : HKQuantity
         if HKHealthStore.isHealthDataAvailable()
         {
-            let infoToRead = Set([HKSampleType.quantityType(forIdentifier: .heartRate)!])
+            let healthStore = HKHealthStore()
+            let readableTypes = Set([HKSampleType.quantityType(forIdentifier: .heartRate)!])
+            healthStore.requestAuthorization(toShare: nil, read: readableTypes) {
+                success, error in
+                guard let heartRateType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
+                    fatalError("*** Unable to create a heart rate type ***")
+                }
+                let heartRateForInterval = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: 95.0)
+                //let heartRateForIntervalSample = HKQuantitySample(type: heartRateType, quantity: heartRateForInterval, startDate: intervals[0], endDate: intervals[1])
+                // in the examples i have found, this should have worked ^
+                heartRate = heartRateForIntervalSample
+                
+            }
+            return heartRate
         }
-    }
+        else
+        {
+            fatalError("Unable to get heart rate data")
+        }
+    }*/
 }
