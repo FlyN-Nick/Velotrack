@@ -1,0 +1,2 @@
+/Users/nicassa/Desktop/Velotrack/Athletic Tracker/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/nicassa/Desktop/Velotrack/Athletic Tracker/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
