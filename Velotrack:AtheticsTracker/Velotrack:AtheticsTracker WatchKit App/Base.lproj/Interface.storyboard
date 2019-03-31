@@ -17,7 +17,7 @@
                         <label alignment="center" text="VeloTrack" textAlignment="center" id="7le-8v-Fob" userLabel="Velotrack">
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
-                        <table alignment="left" id="Gy6-NT-IHA">
+                        <table alignment="center" id="Gy6-NT-IHA">
                             <items>
                                 <tableRow id="knZ-gQ-6L5">
                                     <group key="rootItem" width="1" height="25" alignment="left" id="DaK-6B-6jp">
